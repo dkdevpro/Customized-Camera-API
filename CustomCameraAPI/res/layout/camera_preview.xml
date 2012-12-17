@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cameraLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+		
+	    <!-- Slider Zoom -->
+	
+	    <FrameLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:focusableInTouchMode="true"
+	        android:orientation="vertical" >
+	
+	        <SurfaceView
+	            android:id="@+id/preview"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent" >
+	        </SurfaceView>
+	
+	        <com.din.camera.camera.PhotoFrameView
+	            android:id="@+id/bookCoverFrame"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent" >
+	        </com.din.camera.camera.PhotoFrameView>
+	    </FrameLayout>
+	
+	     <LinearLayout
+	        android:id="@+id/seekPhotoBar"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:gravity="left" >
+	
+	        <TextView
+	            android:layout_width="0dp"
+	            android:layout_height="fill_parent"
+	            android:layout_weight="25" >
+	        </TextView>
+	
+	        <SeekBar
+	            android:id="@+id/zoomSlider"
+	            android:layout_width="0dp"
+	            android:layout_height="fill_parent"
+	            android:layout_marginLeft="48dp"
+	            android:layout_marginRight="0dp"
+	            android:layout_marginTop="0dp"
+	            android:layout_weight="50"
+	            android:background="@android:color/transparent"
+	            android:fadingEdge="vertical"
+	            android:gravity="top"
+	            android:progressDrawable="@drawable/progress"
+	            android:visibility="gone" />
+	
+	        <TextView
+	            android:layout_width="0dp"
+	            android:layout_height="fill_parent"
+	            android:layout_weight="25" >
+	        </TextView>
+	    </LinearLayout> 
+	
+	    <LinearLayout
+	        android:id="@+id/shootPhotoBar"
+	        android:layout_width="wrap_content"
+	        android:layout_height="fill_parent"
+	        android:layout_alignParentRight="true"
+	        android:orientation="vertical"
+	        android:gravity="center" >
+	
+	        <Button
+	            android:id="@+id/shootPhoto"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center"
+	            android:layout_marginRight="10dp"
+	            android:background="@drawable/camera_photo_button_sel" >
+	        </Button>
+	        
+	         
+	            
+	    </LinearLayout>
+	 
+</RelativeLayout>
